@@ -1,2 +1,6 @@
-Once the installation is complete, there is also a folder containing Miniconda in the Resources folder.
-There is also the Megadetector script made by Microsoft: md_v4.1.0.pb
+Once the installation is complete, this Resources folder is complete with folders and code not created by myslelf.
+
+1. ai4eutils (developed by Microsoft)
+2. CameraTraps (developed by Microsoft)
+3. Miniconda
+4. md_v4.1.0.pb (Megadetector script made by Microsoft)
