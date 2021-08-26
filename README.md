@@ -10,10 +10,17 @@ You will have to click a few boxes, to allow the application to install.
 
 
 For example:
+
 ![image](https://user-images.githubusercontent.com/86857625/130882537-44bdb91d-a6dc-435f-9ed1-40b57e821ca3.png)
+
 Click on 'Don't Run'
+
 ![image](https://user-images.githubusercontent.com/86857625/130882565-4846868d-bcca-481f-8248-c07592745045.png)
+
 Click on 'Run anyway'
+
+
+
 
 Then, you can click Next and choose where to put the folder. The current path is the recommended place to put this application.
 After this installation, another window should pop up with the words 'Installer'. This is installing additional folders, and can take some time (around 10-20 minutes).
