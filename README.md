@@ -1,10 +1,15 @@
 # Megadetector-Interface
+## Introduction
 GUI created for the Microsoft Megadetector, as a part of my internship at ZSL.
+
 This GUI is only compatible with Windows.
+
 The application is around 4GB after installation.
 
 
-Installation:
+
+## Installation
+
 Download SetupMD.exe to download the interface. 
 You will have to click a few boxes, to allow the application to install.
 
