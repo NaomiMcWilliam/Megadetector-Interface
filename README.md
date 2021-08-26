@@ -33,6 +33,13 @@ After this installation, another window should pop up with the words 'Installer'
 ## Running
 Once it has finished installing, go to where the folder has been created.
 Usually this will be in the C Drive unless the path was changed. Click on 'MegaDetectorGUI', 'Program', 'RUN_GUI' with the flamingo icon. This should open the application, where the process of using the MegaDetector is explained :). 
+
+
+![image](https://user-images.githubusercontent.com/86857625/130883585-5b9ee069-1586-45f2-9716-84e4758fc7c7.png)
+
+
+
+
 (Currently it will also open the Command Prompt, to enable you to quit the application fully, but this is to be changed in future versions.)
 
 To close the application, click QUIT on the interface. (You will also need to click 'X' on the Command Prompt that has opened, but this is to be changed in future versions.)
