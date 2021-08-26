@@ -30,7 +30,11 @@ Click on 'Run anyway'
 Then, you can click Next and choose where to put the folder. The current path is the recommended place to put this application.
 After this installation, another window should pop up with the words 'Installer'. This is installing additional folders, and can take some time (around 10-20 minutes).
 
+## Running
 Once it has finished installing, go to where the folder has been created.
-Usually this will be in the C Drive unless the path was changed. Click on 'MegaDetectorGUI', 'Program', 'RUN_GUI' with the flamingo icon. This should open the application, where the process of using the MegaDetector is explained :)
+Usually this will be in the C Drive unless the path was changed. Click on 'MegaDetectorGUI', 'Program', 'RUN_GUI' with the flamingo icon. This should open the application, where the process of using the MegaDetector is explained :). 
+(Currently it will also open the Command Prompt, to enable you to quit the application fully, but this is to be changed in future versions.)
+
+To close the application, click QUIT on the interface. (You will also need to click 'X' on the Command Prompt that has opened, but this is to be changed in future versions.)
 
 
