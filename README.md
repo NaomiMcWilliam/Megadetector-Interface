@@ -25,10 +25,18 @@ Click on 'Don't Run'
 Click on 'Run anyway'
 
 
-
+Check below if you are having issues while running it on a Virtual machine of Windows.
 
 Then, you can click Next and choose where to put the folder. The current path is the recommended place to put this application.
 After this installation, another window should pop up with the words 'Installer'. This is installing additional folders, and can take some time (around 10-20 minutes).
+
+###Virtual Machine help
+At first it will install it to your downloads, but due to running it in a virtual machine the path to downloads can be quite complex. You will need to move the SetupMD.exe directly to the C: drive for example, and run it from there.
+
+
+###Older Windows help
+You may need to install curl if you are running on anything other than a Windows 10 upwards version.
+
 
 ## Running
 Once it has finished installing, go to where the folder has been created.
