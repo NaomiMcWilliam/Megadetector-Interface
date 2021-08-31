@@ -29,6 +29,22 @@ Click on 'Run anyway'
 
 Then, you can click Next and choose where to put the folder. The current path is the recommended place to put this application.
 After this installation, another window should pop up with the words 'Installer'. This is installing additional folders, and can take some time (around 10-20 minutes).
+### How it should look after installation
+![image](https://user-images.githubusercontent.com/86857625/131496885-a099e9f5-55f5-4d13-a66a-6650019392cf.png)
+![image](https://user-images.githubusercontent.com/86857625/131496905-8d4e4c41-5781-4b35-ac0a-5a9ef5f6d4fd.png)
+
+Installation folder
+
+![image](https://user-images.githubusercontent.com/86857625/131496929-ed863598-0e44-4d31-8859-856259f91786.png)
+
+Programs folder
+
+![image](https://user-images.githubusercontent.com/86857625/131497002-f9b098c0-8979-4485-9d43-68751669da12.png)
+
+Resources folder
+
+![image](https://user-images.githubusercontent.com/86857625/131497021-cef3768c-f770-45cd-95a4-2ed0978eece0.png)
+
 
 ### Help
 #### Virtual Machine help
