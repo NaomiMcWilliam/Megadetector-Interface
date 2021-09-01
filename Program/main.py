@@ -231,7 +231,7 @@ class MD_GUI(object):
     def Run(self):
         # "python -u" forces output to be unbuffered (each line outputted immediately)
         # command used to run detector script
-
+        import traceback
         os.chdir(self.inputName_dir)
         command = self.make_command()
 
@@ -245,7 +245,8 @@ class MD_GUI(object):
         while True:
             output = process.stderr.readline()
             # if no output
-            if output == '' and process.poll() is not None:
+            if output == '' and process.poll() != None:
+                print("Stop")
                 break
             # if output is detected
             if output:
@@ -254,29 +255,27 @@ class MD_GUI(object):
                 try:
                     # separate all output into a list format: "[hello, world]"
                     splitUp = consoleOut.split()
-
+                    print(splitUp)
                     # extracts the progress percentage to confirm that the script is working
                     percent = re.findall("\d+", splitUp[0])[0]
 
                     # if a percentage is found, we can output to GUI
                     if int(percent) <= 100:
-
                         # format is "current/total", so findall is used to look for integers on either side of "/"
-                        # extracts the current image number & corrects starting image number 0 to 1
-                        currentImage = int((re.findall("(\d+)/", splitUp[2]))[0]) + 1
-                        totalImage = int((re.findall("/(\d+)", splitUp[2]))[0])
-
+                        # extracts the current image number
+                        currentImage = int(((re.findall("(\d+)/", splitUp[-3]))[0]))
+                        totalImage = int((re.findall("/(\d+)", splitUp[-3]))[0])
                         # recalculates the percentage based on the corrected starting image number -> "{0:.1f}" is 1dp
-                        percent = float("{0:.1f}".format(float((currentImage/totalImage)*100)))
+                        percent = float("{0:.1f}".format((currentImage/totalImage)*100))
 
                         # extracts the current time and estimated time
                         # format is "current<estimated", so findall is used to look for strings on either side of "<"
                         # "[:-1]" removes an unwanted character from the end and "[1:]" omits a character form start
-                        finishTime = re.findall("(?<=<).*", splitUp[3][:-1])
-                        currentTime = re.findall("(.*?)<", splitUp[3][1:])
+                        finishTime = re.findall("(?<=<).*", splitUp[-2][:-1])
+                        currentTime = re.findall("(.*?)<", splitUp[-2][1:])
 
                         # iterations per second is extracted ("[:-1]" removes an unwanted character from the end)
-                        iterations = splitUp[4][:-1]
+                        iterations = splitUp[-1][:-1]
 
                         # widgets are updated with new values
                         bar['value'] = int(percent)
@@ -288,9 +287,10 @@ class MD_GUI(object):
 
                 # if script hasn't started processing images do not output to GUI
                 except:
-                    print("")
-
-
+                    # Shows Exception
+                    """
+                    print(traceback.format_exc())
+                    """
 
 
 
@@ -440,10 +440,6 @@ class JSON_Tab(MD_GUI):      #inherited class
         return command
 
 
-
-
-
-
 class ANNOTATE_Tab(MD_GUI):       #inherited class
     def __init__(self,window, menuTab, jsonTab, myTab, folderTab, tabControl):
         MD_GUI.__init__(self, window)
@@ -514,7 +510,7 @@ class ANNOTATE_Tab(MD_GUI):       #inherited class
     def make_command(self):
         jsonInput = self.btn_json['text']
         SaveDirName = self.btn_SaveDir['text']
-        command = ["python", "-u", self.main_path+self.visualizerName, jsonInput, SaveDirName,'--images_dir', self.inputName_dir]
+        command = ["python", self.main_path+self.visualizerName, jsonInput, SaveDirName,'--images_dir', self.inputName_dir]
 
         #optional arguments
         ThreshArg = "--confidence"
@@ -551,8 +547,8 @@ class FOLDER_Tab(MD_GUI):
 
         self.sepfolderCodeName = "\\Resources\\CameraTraps\\api\\batch_processing\\postprocessing\\separate_detections_into_folders.py"      #locatin of separating folders script
 
-        self.img_selectFolder = PhotoImage(file = f"selectFolder.png")
-        self.img_sort = PhotoImage(file = f"sortFolder.png")
+        self.img_selectFolder = PhotoImage(file=f"selectFolder.png")
+        self.img_sort = PhotoImage(file=f"sortFolder.png")
         
     def buttons(self):
         # Quit Button
@@ -569,7 +565,7 @@ class FOLDER_Tab(MD_GUI):
 
         # JSON Tab Button
         b23 = Button(self.myTab, image=self.img_json, borderwidth=0, highlightthickness=0, command=self.openJsonTab, relief="flat")
-        b23.place(x=208, y=-13, width=270, height=62)
+        b23.place(x=209, y=-18, width=270, height=67)
 
         # Folder For Selected Images
         self.btn_SaveDir = Button(self.myTab, image=self.img_selectFolder, borderwidth=0, highlightthickness=0, command=self.SaveLocation, relief="flat", bg="#FFBAA2", activebackground="#FFBAA2", text="", compound="center",  font=("Roboto", 16), fg="#999eb1", anchor="w")
@@ -612,19 +608,19 @@ class FOLDER_Tab(MD_GUI):
         SaveDir = filedialog.askdirectory(initialdir="/", title="Select Save location")
         self.btn_SaveDir['text'] = SaveDir
 
-            # creates command line for creating JSON file
+    # creates command line for creating JSON file
             
     def make_command(self):
         jsonInput = self.btn_json['text']
         SaveDirName = self.btn_SaveDir['text']
-        command = ["python", "-u", self.main_path+self.sepfolderCodeName, jsonInput, self.inputName_dir,SaveDirName ]
+        command = ["python", "-u", self.main_path+self.sepfolderCodeName, jsonInput, self.inputName_dir, SaveDirName]
 
         #optional arguments
         animalArg = "--animal_threshold"
-        if self.entryAnimal.get() !="":
-            command.append(ThreshArg)
+        if self.entryAnimal.get() != "":
+            command.append(animalArg)
             command.append(self.entryAnimal.get())
-            
+
 
         vehicleArg = '--vehicle_threshold'
         if self.entryVehicle.get() != "":   # in entry functions
