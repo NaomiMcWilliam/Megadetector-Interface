@@ -68,6 +68,14 @@ Usually this will be in the C Drive unless the path was changed. Click on 'MegaD
 
 (Currently it will also open the Command Prompt, to enable you to quit the application fully, but this is to be changed in future versions.)
 
+These are currently three different features to choose from. Creating a JSON file, adding annotations to images, and sorting the images into folders. First a JSON file must be created, and then the latter two features can be used, as explained in the GUI. Currently, if you want to do something else after completing one task (such as sorting images into folders after creating the JSON file), you must first close the application and open it again. This should be fixed in later versions.
+
+
 To close the application, click QUIT on the interface. (You will also need to click 'X' on the Command Prompt that has opened, but this is to be changed in future versions.)
+
+## Current issues / Future updates
+1. Allowing for multiple threads. Currently, if you want to run more than one task, such as making a JSON file and then sorting the images into folders, you have to first close the application and start again as it will say it cannot run more than one thread at once. This will be fixed soon.
+
+2. Ensuring the QUIT button functions properly, so that it closes both the GUI and the command module console that it opens. Currently it only closes the GUI, and you must close the command console manually by pressing the 'X'
 
 
