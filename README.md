@@ -53,6 +53,10 @@ Resources folder
 
 
 ### Help
+### No RUN_GUI
+On some machines it does not install 'RUN_GUI.exe', there will be no file with a flamingo icon. If this is the case, you can just click on 'GUI' in the same folder, which is a batch file and it will do the same thing as RUN_GUI.
+
+
 #### Virtual Machine help
 If you are running it through a Windows Virtual machine, at first it will install it to your downloads, but due to running it in a virtual machine the path to downloads can be quite complex. You will need to move the SetupMD.exe directly to the C: drive for example, and run it from there.
 
