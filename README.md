@@ -1,12 +1,18 @@
 # Megadetector-Interface
 ## Introduction
-GUI created for the Microsoft Megadetector, as a part of my internship at ZSL.
+When camera trap studies are conducted there are usually a large number of empty images that are present. The Megadetector was developed by Microsoft in order to classify images into either containing an animal/human/vehicle, or being empty, to reduce time sorting through the images manually. Further information can be found here:
+https://github.com/microsoft/CameraTraps/blob/master/megadetector.md
+
+
+I have created a GUI (graphical user interface) for the Megadetector, as a part of my internship at ZSL. Downloading the megadetector and using it can be quite complicated, the GUI has made it a much simpler, and more user friendly experience.
+It allows users to create a JSON file for their images, visually annotate their images with bounding boxes of animals, and sort their images into folders based on if they are empty / contain an animal etc. It will never alter the original images, it creates copies.
+
+The download instructions can be found below.
 
 This GUI is only compatible with Windows.
-
 The application is around 4GB after installation.
 
-
+Any additional suggestions are welcome, and please contact me if there are any issues with installation / runnning and I will do my best to help. :)
 
 ## Installation
 
@@ -78,4 +84,5 @@ To close the application, click QUIT on the interface. (You will also need to cl
 
 2. Ensuring the QUIT button functions properly, so that it closes both the GUI and the command module console that it opens. Currently it only closes the GUI, and you must close the command console manually by pressing the 'X'
 
+3. Incorperating Megadetector v5 into the GUI once it is realeased. Currently, it is using Megadetector v4.1.0
 
