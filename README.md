@@ -119,6 +119,4 @@ Console output example when creating annotated imgaes:
 3. Incorperating Megadetector v5 into the GUI once it is realeased. Currently, it is using Megadetector v4.1.0
 
 4. Including optimisation features to make running the megadetector faster. Unfortunately, currently it only works well on computers with powerful graphics cards. It still runs on laptops and PC's without this, but can be a lot slower (e.g. 30s/image). There are various ideas to improve upon this, so that it can still run quickly on less powerful machines. 
-
-Members of ZSL are looking into running the application through tensorflowlite, which is a smaller and faster version to tensorflow version 1 and 2, which is what is currently  being used by megadetector v4 and v5.
-They are also looking into manually reducing the image size before hand, rather than having the megadetector do this, as doing it manually via image processing applications could be significantly faster.
+Members of ZSL are looking into running the application through tensorflowlite, which is a smaller and faster version to tensorflow version 1 and 2, which is what is currently     being used by megadetector v4 and v5. They are also looking into manually reducing the image size before hand, rather than having the megadetector do this, as doing it manually via image processing applications        could be significantly faster.
