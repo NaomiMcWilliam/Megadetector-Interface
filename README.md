@@ -102,6 +102,8 @@ Console output example when creating annotated imgaes:
 #### Sorting into folders tab
 ![image](https://user-images.githubusercontent.com/86857625/131762063-97e87e5a-d19d-4584-b215-1c6659b40dbb.png)
 
+Console output example when creating annotated imgaes:
+![image](https://user-images.githubusercontent.com/86857625/131762971-57ee8f6e-713f-4b40-90cf-672b1f1541e3.png)
 
 
 
