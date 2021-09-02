@@ -83,6 +83,28 @@ These are currently three different features to choose from. Creating a JSON fil
 
 To close the application, click QUIT on the interface. (You will also need to click 'X' on the Command Prompt that has opened, but this is to be changed in future versions.)
 
+### Example photos of GUI
+#### Home tab
+![image](https://user-images.githubusercontent.com/86857625/131762022-8cd4492e-b494-4328-97bc-98537088fe04.png)
+
+#### JSON tab
+![image](https://user-images.githubusercontent.com/86857625/131762380-77041994-bd86-468e-afd2-1a45c5977991.png)
+
+Console output example when creating a JSON file:
+![image](https://user-images.githubusercontent.com/86857625/131762459-a313db2f-c325-4c32-a9d7-9dbc8969b880.png)
+
+#### Annotations tab
+![image](https://user-images.githubusercontent.com/86857625/131762056-16884b92-b59c-4e21-868b-00044ce46e56.png)
+
+Console output example when creating annotated imgaes:
+![image](https://user-images.githubusercontent.com/86857625/131762731-a7a582a3-172c-494d-b67e-917733d4990c.png)
+
+#### Sorting into folders tab
+![image](https://user-images.githubusercontent.com/86857625/131762063-97e87e5a-d19d-4584-b215-1c6659b40dbb.png)
+
+
+
+
 ## Current issues / Future updates
 1. Allowing for multiple threads. Currently, if you want to run more than one task, such as making a JSON file and then sorting the images into folders, you have to first close the application and start again as it will say it cannot run more than one thread at once. This will be fixed soon.
 
